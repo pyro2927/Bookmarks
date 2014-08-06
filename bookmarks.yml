@@ -1,0 +1,11 @@
+bookmarks:
+  - name    : Plex
+    href    : http://plex.tv/web
+    img     : imgs/plex.jpg
+  - name    : Google
+    href    : https://www.google.com/
+    img     : https://www.google.com/images/srpr/logo11w.png
+  - name    : Plex
+    href    : http://plex.tv/web
+  - name    : Google
+    href    : https://www.google.com/

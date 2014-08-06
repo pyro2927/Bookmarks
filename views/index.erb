@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./foundation.css">
+  </head>
+  <body>
+    <div class="row">
+    <div class="large-12 columns">
+      <div class="row">
+        <div class="large-12 columns">
+          <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+              <li class="name">
+                <h1>
+                  <a href="#">
+                    Bookmarks
+                  </a>
+                </h1>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+        <% @bookmarks.each do |bm| %>
+          <!-- wrap if necessary -->
+          <li>
+            <a href="<%= bm.href %>" target="about:blank" style="height: auto;">
+              <% if bm.img.nil? %>
+                <img src="http://placehold.it/1000x1000&text=<%= bm.name %>">
+              <% else %>
+                <img src="<%= bm.img %>">
+              <% end %>
+              <div class="panel">
+                <h5><%= bm.name %></h5>
+                <h6 class="subheader"><%= bm.href %></h6>
+              </div>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </body>
+</html>
