@@ -1,6 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="./foundation.css">
+    <link rel="stylesheet" href="./app.css">
   </head>
   <body>
     <div class="row">
@@ -25,11 +26,13 @@
           <!-- wrap if necessary -->
           <li>
             <a href="<%= bm.href %>" target="about:blank" style="height: auto;">
-              <% if bm.img.nil? %>
-                <img src="http://placehold.it/1000x1000&text=<%= bm.name %>">
-              <% else %>
-                <img src="<%= bm.img %>">
-              <% end %>
+              <div class="image_container">
+                <% if bm.img.nil? %>
+                  <img src="http://placehold.it/1000x1000&text=<%= bm.name %>">
+                <% else %>
+                  <img src="<%= bm.img %>">
+                <% end %>
+              </div>
               <div class="panel">
                 <h5><%= bm.name %></h5>
                 <h6 class="subheader"><%= bm.href %></h6>
